@@ -1,0 +1,15 @@
+.menu{
+    list-style : none;
+    display : inline-flex;
+    align-items : center;
+}
+
+.navigation{
+    height : 60px;
+    background-color : grey;
+    width : 100%;
+}
+
+.router-link-active{
+    background-color: blue;
+}

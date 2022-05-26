@@ -3,6 +3,12 @@ import { CommonModule } from '@angular/common';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { TruncatePipe } from './pipes/truncate.pipe';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from '../app-routing.module';
+import { RouterModule } from '@angular/router';
+import { TaskService } from './services/task.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -15,10 +21,16 @@ import { TruncatePipe } from './pipes/truncate.pipe';
   exports: [
     FooterComponent, 
     HeaderComponent,
-    TruncatePipe
+    FormsModule
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    RouterModule,
+    HttpClientModule
+  ],
+  providers: [
+    TaskService
   ]
 })
 export class SharedModule { }

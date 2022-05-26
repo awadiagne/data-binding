@@ -30,7 +30,7 @@ const routes: Routes = [
       },
       {
         path : "",
-        redirectTo : "/dashboard",
+        redirectTo : "dashboard",
         pathMatch : "full"
       }
     ]
@@ -38,7 +38,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class BackofficeRoutingModule { }

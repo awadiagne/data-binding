@@ -5,15 +5,17 @@ import { Page404Component } from './core/components/page404/page404.component';
 const routes: Routes = [
   {
     path : "portail",
-    loadChildren : "app/frontoffice/frontoffice.module#FrontofficeModule"
+    //loadChildren : "app/frontoffice/frontoffice.module#FrontofficeModule"
+    loadChildren : () => import('./frontoffice/frontoffice.module').then(m => m.FrontofficeModule)
   },
   {
     path : "backoffice",
-    loadChildren : "app/backoffice/backoffice.module#BackofficeModule"
+    //loadChildren : "app/backoffice/backoffice.module#BackofficeModule"
+    loadChildren : () => import('./backoffice/backoffice.module').then(m => m.BackofficeModule)
   },
   {
     path : "",
-    redirectTo : "/portail",
+    redirectTo : "portail",
     pathMatch : "full"
   },
   {
@@ -23,7 +25,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{
+    //useHash : true
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
