@@ -4,33 +4,40 @@ import { ChatComponent } from './components/chat/chat.component';
 import { DetailsComponent } from './components/details/details.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { TodoComponent } from './components/todo/todo.component';
+import { FrontofficeComponent } from './frontoffice.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
-    path : "chat",
-    component: ChatComponent
-  },
-  {
-    path : "todo/:id",
-    component : DetailsComponent
-  },
-  {
-    path : "profile",
-    component : ProfileComponent  
-  },
-  {
-    path : "todo",
-    component : TodoComponent
-  },
-  {
-    path : "home",
-    component : HomeComponent
-  },
-  {
     path : "",
-    redirectTo : "/home",
-    pathMatch : "full"
+    component : FrontofficeComponent,
+    children : [
+      {
+        path : "chat",
+        component: ChatComponent
+      },
+      {
+        path : "todo/:id",
+        component : DetailsComponent
+      },
+      {
+        path : "profile",
+        component : ProfileComponent  
+      },
+      {
+        path : "todo",
+        component : TodoComponent
+      },
+      {
+        path : "home",
+        component : HomeComponent
+      },
+      {
+        path : "",
+        redirectTo : "/home",
+        pathMatch : "full"
+      }
+    ]
   }
 ];
 

@@ -7,6 +7,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { HomeComponent } from './home/home.component';
 import { FrontofficeComponent } from './frontoffice.component';
 import { FrontofficeRoutingModule } from './frontoffice-routing.module';
+import { SharedModule } from '../shared/shared.module';
+import { CoreModule } from '../core/core.module';
 
 
 
@@ -21,7 +23,9 @@ import { FrontofficeRoutingModule } from './frontoffice-routing.module';
   ],
   imports: [
     CommonModule,
-    FrontofficeRoutingModule
+    FrontofficeRoutingModule,
+    SharedModule,
+    CoreModule
   ]
 })
 export class FrontofficeModule { }
