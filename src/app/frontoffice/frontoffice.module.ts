@@ -8,8 +8,6 @@ import { HomeComponent } from './home/home.component';
 import { FrontofficeComponent } from './frontoffice.component';
 import { FrontofficeRoutingModule } from './frontoffice-routing.module';
 import { SharedModule } from '../shared/shared.module';
-import { CoreModule } from '../core/core.module';
-
 
 
 @NgModule({
@@ -24,8 +22,7 @@ import { CoreModule } from '../core/core.module';
   imports: [
     CommonModule,
     FrontofficeRoutingModule,
-    SharedModule,
-    CoreModule
+    SharedModule
   ]
 })
 export class FrontofficeModule { }

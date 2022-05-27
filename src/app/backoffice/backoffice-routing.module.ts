@@ -6,6 +6,7 @@ import { ActualitesComponent } from './components/actualites/actualites.componen
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { UsersComponent } from './components/users/users.component';
+import { TodoCrudComponent } from './todo-crud/todo-crud.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
       {
         path : "users",
         component : UsersComponent  
+      },
+      {
+        path : "todo",
+        component : TodoCrudComponent  
       },
       {
         path : "dashboard",

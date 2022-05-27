@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { CoreModule } from './core/core.module';
 import { FrontofficeModule } from './frontoffice/frontoffice.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FrontofficeModule } from './frontoffice/frontoffice.module';
     AppRoutingModule,
     FormsModule,
     CoreModule,
-    FrontofficeModule
+    FrontofficeModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

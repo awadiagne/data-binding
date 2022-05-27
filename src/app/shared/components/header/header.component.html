@@ -1,19 +1,41 @@
 <div class="navigation">
-    <ul class="menu">
+    <ul class="menu" *ngIf="isForFrontoffice">
         <li>
-            <a href="/portail/home">Home</a>
+            <a routerLink="/portail/home" routerLinkActive="router-link-active">Home</a>
         </li>
 
         <li>
-            <a href="/portail/todo" routerLinkActive>Mes todos</a>
+            <a routerLink="/portail/todo" routerLinkActive="router-link-active">Mes todos</a>
         </li>
 
         <li>
-            <a href="/portail/profile" routerLinkActive>Mon Profil</a>
+            <a routerLink="/portail/profile" routerLinkActive="router-link-active">Mon Profil</a>
         </li>
 
         <li>
-            <a href="/portail/chat" routerLinkActive>Chat</a>
+            <a routerLink="/portail/chat" routerLinkActive="router-link-active">Chat</a>
+        </li>
+    </ul>
+
+    <ul class="menu" *ngIf="!isForFrontoffice">
+        <li>
+            <a routerLink="/backoffice/dashboard" routerLinkActive="router-link-active">Dashboard</a>
+        </li>
+
+        <li>
+            <a routerLink="/backoffice/todo" routerLinkActive="router-link-active">Gérer Todo</a>
+        </li>
+
+        <li>
+            <a routerLink="/backoffice/actualites" routerLinkActive="router-link-active">Gérer Actu</a>
+        </li>
+
+        <li>
+            <a routerLink="/backoffice/users" routerLinkActive="router-link-active">Gérer users</a>
+        </li>
+
+        <li>
+            <a routerLink="/backoffice/profile" routerLinkActive="router-link-active">Profil</a>
         </li>
     </ul>
 </div>

@@ -9,6 +9,7 @@ import { AppRoutingModule } from '../app-routing.module';
 import { RouterModule } from '@angular/router';
 import { TaskService } from './services/task.service';
 import { HttpClientModule } from '@angular/common/http';
+import { MaterialModule } from './material.module';
 
 
 
@@ -21,13 +22,15 @@ import { HttpClientModule } from '@angular/common/http';
   exports: [
     FooterComponent, 
     HeaderComponent,
-    FormsModule
+    FormsModule,
+    MaterialModule
   ],
   imports: [
     CommonModule,
     FormsModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    MaterialModule
   ],
   providers: [
     TaskService

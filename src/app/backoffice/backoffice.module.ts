@@ -8,11 +8,12 @@ import { BackofficeComponent } from './backoffice.component';
 import { SharedModule } from '../shared/shared.module';
 import { CoreModule } from '../core/core.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { TodoCrudComponent } from './todo-crud/todo-crud.component';
 
 
 
 @NgModule({
-  declarations: [ProfileComponent, ActualitesComponent, UsersComponent, BackofficeComponent, DashboardComponent],
+  declarations: [ProfileComponent, ActualitesComponent, UsersComponent, BackofficeComponent, DashboardComponent, TodoCrudComponent],
   imports: [
     CommonModule,
     BackofficeRoutingModule,
