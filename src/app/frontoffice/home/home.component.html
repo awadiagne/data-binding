@@ -1,7 +1,54 @@
-<p>home works!</p>
+<div class="bordered" fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutAlign="space-between stretch">
+    
+    <div class="box side-nave" fxFlex="30" fxFlex.lt-md="100" fxLayout="column" fxLayoutAlign="start end">
 
-<mat-slider min="1" max="100" step="1" value="50"></mat-slider>
+        <div class="box" style="width : 200px">
+            Tableau de bord
+        </div>
 
-<button mat-raised-button color="primary">Start Project</button>
+        <div class="box" style="width : 200px">
+            Espace de travail
+        </div>
 
+    </div>
 
+    <div class="box content" fxFlex="60" fxFlex.lt-md="100" fxLayout="column" fxLayoutAlign="space-between stretch ">
+    
+        <div class="box favoris">
+            <div fxLayout="row" fxLayoutAlign="start" fxLayoutGap="10px">
+                <mat-icon aria-hidden="false" aria-label="Example of home">star_border</mat-icon>
+            Tableau favoris
+            </div>
+            <div fxLayout="row" fxLayout.lt-md="column" class ="card-row" fxLayoutAlign="start" fxLayoutAlign.lt-md="center" fxLayoutGap="10px">
+                <mat-card class="example-card" *ngFor="let fav of favoris">
+                    <mat-card-title>{{ fav.title }}</mat-card-title>
+                    <mat-card-subtitle>{{ fav.description }}</mat-card-subtitle>
+                    <mat-card-content>
+                        <p>{{ fav.description }}</p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+
+        <div class="box consultes">
+            <div fxLayout="row" fxLayoutAlign="start" fxLayoutGap="10px">
+                <mat-icon aria-hidden="false" aria-label="Example of home">star_border</mat-icon>
+                Récemment consultés
+            </div>
+            <div fxLayout="row" fxLayout.lt-md="column" class ="card-row" fxLayoutAlign="start" fxLayoutGap="10px">
+                <mat-card class="example-card" *ngFor="let fav of consultes">
+                    <mat-card-title>{{ fav.title }}</mat-card-title>
+                    <mat-card-subtitle>{{ fav.description }}</mat-card-subtitle>
+                    <mat-card-content>
+                        <p>{{ fav.description }}</p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+
+        <div class="box espace" >
+            Votre espace de travail
+        </div>
+
+    </div>
+</div>

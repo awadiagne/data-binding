@@ -1,41 +1,43 @@
 <div class="navigation">
+
     <ul class="menu" *ngIf="isForFrontoffice">
         <li>
-            <a routerLink="/portail/home" routerLinkActive="router-link-active">Home</a>
+            <button mat-button routerLink="/portail/home" routerLinkActive="router-link-active">Home</button>
         </li>
 
         <li>
-            <a routerLink="/portail/todo" routerLinkActive="router-link-active">Mes todos</a>
+            <button mat-button routerLink="/portail/todo" routerLinkActive="router-link-active">Todos</button>
+
         </li>
 
         <li>
-            <a routerLink="/portail/profile" routerLinkActive="router-link-active">Mon Profil</a>
+            <button mat-button routerLink="/portail/profile" routerLinkActive="router-link-active">Mon Profil</button>           
         </li>
 
         <li>
-            <a routerLink="/portail/chat" routerLinkActive="router-link-active">Chat</a>
+            <button mat-button routerLink="/portail/chat" routerLinkActive="router-link-active">Chat</button>                       
         </li>
     </ul>
 
     <ul class="menu" *ngIf="!isForFrontoffice">
         <li>
-            <a routerLink="/backoffice/dashboard" routerLinkActive="router-link-active">Dashboard</a>
+            <button mat-button routerLink="/backoffice/dashboard" routerLinkActive="router-link-active">Dashboard</button>
         </li>
 
         <li>
-            <a routerLink="/backoffice/todo" routerLinkActive="router-link-active">Gérer Todo</a>
+            <button mat-button routerLink="/backoffice/todo" routerLinkActive="router-link-active">Gérer Todos</button>
         </li>
 
         <li>
-            <a routerLink="/backoffice/actualites" routerLinkActive="router-link-active">Gérer Actu</a>
+            <button mat-button routerLink="/backoffice/actualites" routerLinkActive="router-link-active">Gérer Actu</button>
         </li>
 
         <li>
-            <a routerLink="/backoffice/users" routerLinkActive="router-link-active">Gérer users</a>
+            <button mat-button routerLink="/backoffice/users" routerLinkActive="router-link-active">Gérer Users</button>            
         </li>
 
         <li>
-            <a routerLink="/backoffice/profile" routerLinkActive="router-link-active">Profil</a>
+            <button mat-button routerLink="/backoffice/profile" routerLinkActive="router-link-active">Gérer Profil</button>
         </li>
     </ul>
 </div>

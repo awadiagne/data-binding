@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
 import { TaskService } from './services/task.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './material.module';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -23,14 +23,16 @@ import { MaterialModule } from './material.module';
     FooterComponent, 
     HeaderComponent,
     FormsModule,
-    MaterialModule
+    MaterialModule,
+    FlexLayoutModule
   ],
   imports: [
     CommonModule,
     FormsModule,
     RouterModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+    FlexLayoutModule
   ],
   providers: [
     TaskService

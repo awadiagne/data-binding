@@ -1,15 +1,31 @@
-.menu{
-    list-style : none;
-    display : inline-flex;
-    align-items : center;
-}
-
 .navigation{
     height : 60px;
-    background-color : grey;
     width : 100%;
+    .menu{
+        list-style : none;
+        display : inline-flex;
+        align-items : center;
+    }
 }
 
 .router-link-active{
     background-color: yellow;
+}
+
+.container{
+    width : 100%;
+    display : flex;
+    flex-direction : row;
+    flex-wrap: wrap;
+    border : solid 1px blue;
+    justify-content: space-between;
+}
+
+.box{
+    border : solid 1px red;
+    text-align : center;
+}
+
+.bordered{
+    border : solid 1px red;
 }

@@ -1,0 +1,30 @@
+.bordered{
+    border : solid 1px red;
+}
+
+.container{
+    width : 100%;
+    display : flex;
+    flex-direction : row;
+    flex-wrap: wrap;
+    border : solid 1px blue;
+    justify-content: space-between;
+}
+
+.box{
+    border : solid 1px red;
+    text-align : center;
+}
+
+.favoris{
+    width : 100%;
+    .card-row{
+        width : 100%;
+        border : solid 1px green;
+        .example-card {
+            max-width: 400px;
+            margin-right: 10px;
+        }
+    }
+}
+  
